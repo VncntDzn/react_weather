@@ -12,7 +12,7 @@ export default function Weather() {
 
 
     const retrieveWeather = async () => {
-        const response = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=71655ad9b62c3bd8ce364441183c9efb`);
+        const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=71655ad9b62c3bd8ce364441183c9efb`);
         setWeather(response.data)
         console.log(weather);
     };
