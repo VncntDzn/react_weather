@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+
+$poppins: 'Poppins',
+sans-serif;
+
+.weather {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+
+    &__background {
+        background-image: url('../assets/night.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+
+
+    &__title {
+        color: white;
+    }
+
+    &__details {
+
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .weather {
+        display: flex;
+        flex-direction: column;
+
+        &__title {
+            margin-top: 20px;
+            margin-left: 10px;
+
+            h1 {
+                letter-spacing: 2px;
+                font-family: $poppins;
+                font-size: 20px;
+            }
+        }
+
+        &__input {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20vh;
+
+            input {
+                padding: 5px;
+                height: 7vh;
+                border-radius: 10px;
+                border: none;
+                margin-top: 20px;
+                align-self: center;
+                width: 65%;
+                font-family: $poppins;
+                font-size: 20px;
+                letter-spacing: .8px;
+            }
+
+            button {
+                font-family: $poppins;
+                margin: 10px 0;
+                align-self: center;
+                width: 35%;
+                height: 5vh;
+
+                border-radius: 10px;
+                border: none;
+            }
+
+            button:hover {
+                letter-spacing: 2px;
+            }
+        }
+
+        &__details {
+            border-radius: 15px;
+            height: 40vh;
+            display: flex;
+            margin: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 13px;
+
+            h1 {
+                color: white;
+                font-family: $poppins;
+            }
+
+            &__location {
+                margin-top: 12px;
+                color: white;
+                height: 7vh;
+                display: flex;
+                flex-direction: column;
+
+                &--info {
+                    display: flex;
+                    flex-direction: row;
+
+                    h1 {
+                        font-family: $poppins;
+                        font-size: 40px;
+                        margin: 0 10px;
+                    }
+
+                    &--time_loc {
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-top: 10px;
+                        font-size: 18px;
+                        font-family: $poppins;
+                    }
+                }
+
+                &--main {
+                    margin-top: 10px;
+
+                    p {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+}
