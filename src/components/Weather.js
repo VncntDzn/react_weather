@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../styles/weather.scss';
 import axios from 'axios';
 import moment from 'moment';
@@ -38,7 +38,7 @@ export default function Weather() {
                             <div className="weather__details__location">
 
                                 <div className="weather__details__location--info">
-                                    <img height="35px" src={`http://openweathermap.org/img/w/${weather.weather[0].icon}.png`} />
+                                    <img alt="icon" height="35px" src={`http://openweathermap.org/img/w/${weather.weather[0].icon}.png`} />
                                     <h1>{weather.main.temp}°</h1>
 
                                     <div className="weather__details__location--info--time_loc">
