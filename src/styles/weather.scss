@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 
-
 $poppins: 'Poppins',
 sans-serif;
 
@@ -24,12 +23,27 @@ sans-serif;
 
 
     &__title {
+        margin: 20px;
         color: white;
     }
 
-    &__details {
+    &__input {
+        margin: 200px 400px;
+        position: absolute;
 
+        button {
+            margin-left: 60px;
+        }
+    }
+
+    &__details {
         background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        margin-top: 190px;
+        color: white;
+        padding: 10px;
+        margin-left: 10px;
+
     }
 
 }

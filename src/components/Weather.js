@@ -14,7 +14,6 @@ export default function Weather() {
     const retrieveWeather = async () => {
         const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=71655ad9b62c3bd8ce364441183c9efb`);
         setWeather(response.data)
-        console.log(weather);
     };
 
     return (
@@ -29,7 +28,6 @@ export default function Weather() {
                     <input type="text" value={location} onChange={(e) => setLocation(e.target.value)} required autoFocus placeholder="Enter a Country..." />
                     <button type="submit" onClick={retrieveWeather}>Search</button>
                 </div>
-
 
                 <div className="weather__details">
                     {(typeof weather.main !== "undefined") ? (
